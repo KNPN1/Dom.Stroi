@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff;
+
+    transition: background 0.2s linear;
+}
+
+
+.body--dark {
+    background: #282c34;
+}
+
+.page {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin-bottom: 30px;
+
+    text-shadow: 0 0 30px rgba(0, 218, 247, 0.5);
+    color: aqua;
+    font-size: 120px;
+    letter-spacing: 10px;
+}
+
+.wrapper {
+    margin-bottom: 50px;
+
+    display: flex;
+}
+
+.title--light {
+    color: #282c34;
+    
+    font-size: 86px;
+}
+
+.title--dark {
+    color: #ffffff;
+
+    font-size: 86px;
+}
+
+.text {
+    margin-bottom: 70px;
+
+    max-width: 600px;
+
+    text-align: left;
+    font-size: 36px;
+    line-height: 1.5;
+}
+
+.text--white {
+    color:#ffffff
+
+}
+
+.toggle {
+    display:flex;
+}
+
+.toggle__btn {
+    margin: 0 10px;
+
+    position: relative;
+
+    width: 70px;
+
+    border: 1px solid #d4d4d4;
+    border-radius: 35px;
+
+    background: #262626;
+
+    cursor: pointer;
+}
+
+.toggle__btn::before {
+    content: "";
+
+    position:absolute;
+
+    height: 24px;
+    width: 24px;
+
+    border: 1px solid #d4d4d4;
+    border-radius: 35px;
+    background: #ffffff;
+
+    top: 6px;
+    left: 4px; 
+    transition: all 0.2s linear;
+}
+
+.toggle__btn.toggle__btn--on::before{
+    left: calc(100% - 32px);
+   
+}
+
+.sun-icon, .moon-icon {
+    height: 100%;
+    width: 40px;
+}

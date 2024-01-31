@@ -1,0 +1,19 @@
+body {
+    background-color: #ffffff;
+}
+
+.dark-theme {
+    background-color: #373a3e;
+}
+
+button {
+    background-color: #373a3e; 
+    color: #b62c2c;
+}
+
+.dark-theme button {
+    background-color: #777777; 
+    color: #5a44d3;
+}
+
+

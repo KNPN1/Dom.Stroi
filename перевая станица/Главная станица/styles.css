@@ -1,0 +1,211 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e3e3e3;
+    transition: background-color 0.2s, color 0.2s; /* Добавим плавный переход цветов */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+body.body--dark {
+    background-color: #1a1f28; /* Темная тема #1a1f28 */
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.nav {
+    display: flex;
+    margin-left: 40%; /* Измените значение по вашему усмотрению */
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+    color: #6c6c6c; /* Цвет текста на вкладках #c8c8c8 */
+}
+
+.nav a:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 2px;
+    background-color: #818181; /* Цвет линии на светлой теме */
+    right: -12%;
+    top: 15%;
+}
+
+.separator {
+    margin: 0 8px;
+}
+
+.toggle {
+    display: flex;
+    
+    
+}
+
+/* Переместили стили toggle__btn внутрь div.toggle */
+.toggle .toggle__btn {
+    margin: 0 10px;
+    position: relative;
+    width: 70px;
+    border: 1px solid #aaaaaa;
+    border-radius: 35px;
+    height: 38px;
+    background: #262626;
+    cursor: pointer;
+}
+
+.toggle .toggle__btn::before {
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border: 1px solid #d4d4d4;
+    border-radius: 35px;
+    background: #f3f3f3;
+    top: 6px;
+    left: 4px;
+    transition: all 0.2s linear;
+}
+
+.toggle .toggle__btn.toggle__btn--on::before {
+    left: calc(100% - 32px);
+}
+
+.sun-icon,
+.moon-icon {
+    height: 100%;
+    width: 40px;
+}
+
+/* Добавим стили для темной темы */
+body.body--dark .nav a {
+    color: #c9c9c9; /* Цвет текста на вкладках в темной теме */
+}
+
+body.body--dark .nav a:not(:last-child)::after {
+    background-color: #a5a5a5; /* Цвет линии в темной теме #c8c8c8 */
+}
+
+
+
+/* вот до сюда применялись только для header */
+
+.Postroi,
+.Svoei,
+.Mechta {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 80px; /* Используем vw вместо px для адаптивного размера шрифта */
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.Postroi {
+    top: 15%;
+    left: 30%;
+    height: 100px;
+    width: 600px;
+}
+
+.Svoei {
+    top: 86%;
+    left: 29%;
+    height: 200px;
+    width: 400px;
+}
+
+.Mechta {
+    top: 96%;
+    left: 40%;
+    height: 200px;
+    width: 400px;
+}
+
+/* Добавим стили для текста и кнопки */
+/* Добавим стили для текста и кнопки */
+.content {
+    display: flex;
+}
+
+.text-left {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+.catalog-text, .custom-house-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin: 8px 30px;
+    margin-bottom: 8px;
+    color: #6c6c6c;
+    transition: color 0.2s; /* Плавный переход цвета */
+}
+
+.custom-house-text {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.button-right {
+    padding: 20px;
+    text-align: center; /* Центрируем содержимое в блоке */
+}
+
+.catalog-button {
+    display: inline-block; /* Превращаем ссылку в блочный элемент для управления шириной */
+    background-color: #1a1f28;
+    color: #e3e3e3;
+    margin: 30px;
+    padding: 20px 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    text-decoration: none; /* Убираем стандартное подчеркивание для ссылки */
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s; /* Плавный переход цвета */
+}
+
+body.body--dark .catalog-button {
+    background-color: #e3e3e3;
+    color: #1a1f28;
+}
+
+body.body--dark .catalog-text, 
+body.body--dark .custom-house-text {
+    color: #c9c9c9;
+}
+
+.right-content img {
+    width: 120%;
+    max-width: 120%;
+    height: auto;
+}
+
+.left_content {
+    left: 80%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.build-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #6c6c6c;
+}
+
+/* Остальные стили оставьте без изменений */

@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #c01f1f;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8a8a8a; /* Светлая тема */
+    color: #ffffff; 
+    padding: 10px;
+
+}
+
+.header.dark-theme {
+    background-color: #212529; /* Темная тема */
+}
+
+.logo img {
+    max-height: 50px;
+    width: 213px;
+}
+
+.nav {
+    display: flex;
+    margin-left: 30%; /* Измените значение по вашему усмотрению */
+}
+
+/* Добавляем стили для линий между вкладками */
+.nav a {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+    position: relative;
+}
+
+.nav a:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 2px;
+    background-color: #828282c0; /* Цвет линии */
+    right: -12%;
+    top: 15%;
+}
+
+
+.toggle-theme {
+    display: flex;
+    align-items: center;
+}
+
+.theme-slider {
+    margin: 0 10px;
+}
+/* Добавляем стили для разделителя между вкладками */
+.separator {
+    margin: 0 8px;
+}
+
+/* Добавляем стили для темной темы */
+body.dark-theme {
+    background-color: #212529;
+    color: #ffff00;
+}
+
+/* Остальные стили остаются без изменений */
